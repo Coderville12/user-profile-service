@@ -2,10 +2,10 @@ databaseChangeLog:
   - includeAll:
       path: db/changelog/202501-initial-schema
 
-  - changeSet:
-      id: 202503-customer-order-stats
-      author: gunjan
-      changes:
-        - sqlFile:
-            path: db/changelog/202503-customer-order-stats/customer_order_stats.sql
-            relativeToChangelogFile: false
+#  - changeSet:
+#      id: 202503-customer-order-stats
+#      author: gunjan
+#      changes:
+#        - sqlFile:
+#            path: db/changelog/202503-customer-order-stats/customer_order_stats.sql
+#            relativeToChangelogFile: false
