@@ -13,6 +13,7 @@ public class OrderCreatedEvent {
 
     private Long orderId;
     private Long customerId;
-    private java.util.List<String> items;
+    private String items;
     private double totalPrice;
+
 }

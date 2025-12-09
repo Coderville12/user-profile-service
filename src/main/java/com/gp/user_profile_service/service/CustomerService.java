@@ -2,7 +2,6 @@ package com.gp.user_profile_service.service;
 
 
 import com.gp.user_profile_service.entity.Customer;
-import com.gp.user_profile_service.event.OrderCreatedEvent;
 import com.gp.user_profile_service.repo.CustomerRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -37,15 +36,15 @@ public class CustomerService {
    }
 
 
-    public void handleOrderCreated(OrderCreatedEvent event) {
-
-        Customer customer = customerRepository.findById(event.getCustomerId())
-                .orElseThrow(() -> new RuntimeException("Customer not found"));
-
-        customer.setLastOrderAmount(event.getTotalPrice());
-        customer.setLastOrderItems(event.getItems().toString());
-        customerRepository.save(customer);
-
-        System.out.println("Customer updated successfully for order=" + event.getOrderId());
-    }
+//    public void handleOrderCreated(OrderCreatedEvent event) {
+//
+//        Customer customer = customerRepository.findById(event.getCustomerId())
+//                .orElseThrow(() -> new RuntimeException("Customer not found"));
+//
+////        customer.setPr(event.getTotalPrice());
+////        customer.setLastOrderItems(event.getItems().toString());
+//        customerRepository.save(customer);
+//
+//        System.out.println("Customer updated successfully for order=" + event.getOrderId());
+//    }
 }
